@@ -8,14 +8,27 @@
     font-family: 'Monument';
     src: url(./Assets/MonumentExtended/MonumentExtended-Regular.otf);
 }
+@font-face {
+    font-family: 'MonumentB';
+    src: url(./Assets/MonumentExtended/MonumentExtended-Ultrabold.otf);
+}
+@font-face {
+    font-family: "Gilroy";
+    src: url(./Assets/Gilroy/Radomir\ Tinkov\ -\ Gilroy-ExtraBold.otf);
+}
+@font-face {
+    font-family: "GilroyL";
+    src: url(./Assets/Gilroy/Radomir\ Tinkov\ -\ Gilroy-Light.otf);
+}
 body{
     height: 100%;
     width: 100%;
+    background-color: #00000012;
 }
 .main{
     height: 100vh;
     width: 100%;
-    background-color: aqua;
+    /* background-color: aqua; */
     padding-top: 0.1px; /*css bug*/
     position: relative;
 }
@@ -24,7 +37,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10vh;
+    height: 10%;
     width: 100%;
     margin-top: 35px;
     border-top: 2px solid black;
@@ -41,6 +54,26 @@ nav h1{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+nav h1::after{
+    content: "©";
+    font-size: smaller;
+    position: absolute;
+    font-family: 'Gilroy';
+    font-weight: 900;
+    right: 24%;
+    top: 20%;
+}
+nav h1::before{
+    content: "model management";
+    position: absolute;
+    font-size: 10px;
+    font-family: 'Gilroy';
+    letter-spacing: 2px;
+    bottom: 17%;
+    right: 29%;
+
 }
 nav ol{
     list-style-type: none;
@@ -73,4 +106,214 @@ nav a>svg{
     height: 100%;
     display: flex;
     justify-content: center;
+}
+
+.center{
+    width: 100%;
+    height: 90%;
+    /* background-color: blueviolet; */
+    position: relative;
+    padding: 5vw;
+}
+.center .content{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    position: relative;
+}
+.content video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.content .cover{
+    position: absolute;
+    height: 40vh;
+    width: 100%;
+    bottom: 0%;
+    color: whitesmoke;
+    padding: 3.8vw;
+    /* background-color: aquamarine;  */
+}
+.content .cover-part-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content .cover-part-1 h2{
+    font-size: 3.6vw;
+    mix-blend-mode: difference;
+}
+.content .cover-part-1 h4{
+    font-size: 1.6vw;
+    mix-blend-mode: difference;
+    border: solid 1px;
+    padding: 1vh;
+    border-radius: 47%;
+}
+.content .cover-part-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1.5px solid whitesmoke;
+    mix-blend-mode: difference;
+    margin-top: 3vh;
+    padding-top: 2vh;
+}
+.content .cover-part-2 h4{
+    font-size: 2vw;
+    mix-blend-mode: difference;
+}
+.cover-part-2 i{
+    scale: 200%;
+    color: white;
+    mix-blend-mode: difference;
+    margin-right: 16px;
+}
+.scroll{
+    width: 100%;
+    height: 40vh;
+    /* background-color: crimson; */
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.scroll .container{
+    height: 100%;
+    width: 103%;
+    /* background: #000; */
+    display: inline-block;
+    padding: 2vw;
+    animation-name: Scroll;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.scroll img{
+    height: 80%;
+    width: 15%;
+    object-fit: cover;
+    object-position: 50% 40%;
+    border-radius: 50%;
+    margin-right: 1.75vw;
+}
+.index{
+    width: 100%;
+    height: 15vh;
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: x-large;
+    padding: 10vh 15vw;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+    letter-spacing: 2px;
+    font-family: "GilroyL";
+}
+.index h4{
+    /* background-color: aqua; */
+    border-radius: 50%;
+    padding: 0.4vw 0.6vw;
+    font-style: italic;
+    margin: 0 5px;
+    transition: all 0.2s linear;
+    border: solid 1px #00000000;
+}
+.index h4:hover{
+    border: solid 1px #000;
+}
+.index h2{
+    margin-right: 50px;
+    /* background-color: crimson; */
+}
+
+.posts-part1{
+    width: 100%;
+    height: 90vh;
+    /* background-color: lightcoral; */
+    padding: 6vw;
+    display: flex;
+    justify-content: center;
+}
+.posts-part1 .bigger{
+    /* background-color: aqua; */
+    width: 70vw;
+    height: 110%;
+    object-fit: cover;
+    object-position: center;
+    padding: 0vw 4vw 0vw 0vw ;
+}
+.posts-part1 div{
+    padding-left: 2vw;
+}
+.posts-part1 .smaller{
+    width: 103%;
+    height: 90%;
+    object-fit: cover;
+}
+.posts-part1 .poster-articles{
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+    padding: 1vw 3vw;
+}
+.post-titlepost-title{
+    width: 100%;
+    padding: 1vh 6vw;
+    font-size: xx-large;
+    font-family: 'MonumentB';
+}
+.posts-part2{
+    width: 100%;
+    height: 80vh;
+    /* background-color: cadetblue; */
+    padding: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.posts-part2 .join-us{
+    height: 100%;
+    width: 35vw;
+    /* background-color: azure; */
+}
+.posts-part2 .join-us div{
+    width: 100%;
+    height: 75%;
+    /* background-color: bisque; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+} 
+.posts-part2 .join-us div img{
+    position: absolute;
+    left: calc(50% - 22px);
+    top: calc(50% - 25px);
+    scale: 1.3;
+}
+.posts-part2 .join-us div svg{
+    margin-left: 30px;
+}
+.posts-part2>img{
+    height: 100%;
+    width: 65vw;
+    /* background-color: blueviolet; */
+    padding-left: 10vw;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+@keyframes Scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 6px));
+    }
+    
 }
